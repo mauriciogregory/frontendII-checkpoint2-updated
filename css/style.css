@@ -1,0 +1,165 @@
+/* para responsividade trocar px por % ou rem */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    background: rgba(158, 152, 240, 0.333);
+}
+
+#home-link {
+    text-decoration: none;
+}
+
+.botao{
+  float:right;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.75rem;
+    float: left;
+}
+
+#lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
+
+}
+
+.forms {
+    width: 50%;
+}
+
+.cabecalho {
+    position: sticky;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 10px;
+    background-color: blueviolet
+}
+
+h2 {
+    color: rgb(241, 241, 241)
+}
+
+input,textarea {
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgb(213, 207, 230);
+    border-color: rgb(0, 110, 255);
+    color: white;
+}
+
+#btn {
+    background-color: blueviolet;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 4fr)); */
+    margin: 20px;
+    background-color: rgba(79, 80, 90, 0.973);
+    text-decoration: none;
+    list-style: none;
+    border-radius: 5px;
+    padding: 15px;
+    border: 3px solid white;
+    color: white;
+    break-inside: avoid;
+}
+
+.card-done {
+    text-decoration: line-through;
+}
+
+.btnExcluir{
+    padding: 15px;    
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    align-items: flex-end;
+    justify-content: end;
+    justify-items: flex-end;
+}
+
+
+body.dark {
+    background-color: #292c35;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+
+.ball { 
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+
+.fa-moon {
+    color: #f1c40f;
+
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+@media (max-width: 600px) {
+    section {
+        display: flex;
+        height: 100vh;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*.forms {
+        
+        
+    }*/
+}
