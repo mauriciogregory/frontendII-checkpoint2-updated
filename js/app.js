@@ -51,7 +51,10 @@ btn.addEventListener('click', function criarLista(evento) {
   if ((anoTermino == ano) && ((mesTermino >= mes) && (diaTermino >= dia))) {
     // comparando string textarea validando
     if (descricao.value.length <= 10) {
-      alert("O número de caracteres precisa ser maior que 10!")
+      // alert("O número de caracteres precisa ser maior que 10!")
+      Swal.fire("O número de caracteres precisa ser maior que 10!",
+      "",
+      "error");
     } else {
       inputDataCriacao.value = (ano.toString() + "-" + mes.toString() + "-" + dia.toString());
       li.innerHTML = "Data de criação: " + inputDataCriacao.value + "<br>" + "Data Limite: " +
@@ -90,7 +93,10 @@ btn.addEventListener('click', function criarLista(evento) {
     if (anoTermino > ano) {
       // comparando string textarea validando
       if (descricao.value.length <= 10) {
-        alert("O número de caracteres precisa ser maior que 10!")
+        // alert("O número de caracteres precisa ser maior que 10!")
+        Swal.fire("O número de caracteres precisa ser maior que 10!",
+                  "",
+                  "error");
       } else {
         inputDataCriacao.value = (ano.toString() + "-" + mes.toString() + "-" + dia.toString());
         li.innerHTML = "Data de criação: " + inputDataCriacao.value + "<br>" + "Data Limite: " +
