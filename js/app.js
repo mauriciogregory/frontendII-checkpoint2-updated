@@ -53,7 +53,7 @@ btn.addEventListener('click', function criarLista(evento) {
     if (descricao.value.length <= 10) {
       // alert("O número de caracteres precisa ser maior que 10!")
       Swal.fire("O número de caracteres precisa ser maior que 10!",
-      "",
+      "Entrada Inválida!",
       "error");
     } else {
       inputDataCriacao.value = (ano.toString() + "-" + mes.toString() + "-" + dia.toString());
@@ -95,7 +95,7 @@ btn.addEventListener('click', function criarLista(evento) {
       if (descricao.value.length <= 10) {
         // alert("O número de caracteres precisa ser maior que 10!")
         Swal.fire("O número de caracteres precisa ser maior que 10!",
-                  "",
+                  "Entrada Inválida!",
                   "error");
       } else {
         inputDataCriacao.value = (ano.toString() + "-" + mes.toString() + "-" + dia.toString());
