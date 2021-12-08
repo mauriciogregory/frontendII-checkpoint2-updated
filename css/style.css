@@ -92,7 +92,8 @@ input,textarea {
 }
 
 .btnExcluir{
-    padding: 15px;    
+    padding: 15px;   
+    background-color: blue; 
 }
 
 footer {

@@ -88,7 +88,7 @@ btn.addEventListener('click', function criarLista(evento) {
         }
         else if (document.getElementById('checkbox').unchecked = true) {
 
-          li.className.remove('card-done');
+          li.classList.remove('card-done');
         }
       })
     }
