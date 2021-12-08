@@ -151,10 +151,53 @@ btn.addEventListener('click', function criarLista(evento) {
 
   btnExcluir.addEventListener('click',
     function _click() {
-      var confirmar = confirm("Quer excluir o item?");
-      if (confirmar == true) {
-        document.getElementById('card1').remove();
-      }
+      // var confirmar = confirm("Quer excluir o item?");
+      var confirmar = Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+          document.getElementById('card1').remove();
+        }
+      })
+
+      // if (confirmar == true) {
+      //   document.getElementById('card1').remove();
+      // }
 
     });
+
+    anime({
+      targets: 'label',
+      translateX: 50,
+      rotate: '1turn',
+      backgroundColor: '#FFF',
+      duration: 800
+    });
+
+    anime({
+      targets: 'button',
+      translateX: 10,
+      rotate: '1turn',
+      backgroundColor: '#0000',
+      duration: 800
+    });
 });
+
+// anime({
+//   targets: 'button',
+//   translateX: 250,
+//   rotate: '1turn',
+//   backgroundColor: '#FFF',
+//   duration: 800
+// });
