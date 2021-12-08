@@ -8,6 +8,8 @@
 body {
     font-size: 20px;
     background: rgba(158, 152, 240, 0.333);
+    color: red;
+    font-weight: bold;
 }
 
 #home-link {
