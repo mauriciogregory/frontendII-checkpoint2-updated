@@ -52,9 +52,12 @@ btn.addEventListener('click', function criarLista(evento) {
     // comparando string textarea validando
     if (descricao.value.length <= 10) {
       // alert("O número de caracteres precisa ser maior que 10!")
-      Swal.fire("O número de caracteres precisa ser maior que 10!",
-      "Entrada Inválida!",
-      "error");
+      Swal.fire({
+        title: 'Ops!',
+        text: 'O número de caracteres precisa ser maior que 10!',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      });
     } else {
       inputDataCriacao.value = (ano.toString() + "-" + mes.toString() + "-" + dia.toString());
       li.innerHTML = "Data de criação: " + inputDataCriacao.value + "<br>" + "Data Limite: " +
@@ -94,9 +97,12 @@ btn.addEventListener('click', function criarLista(evento) {
       // comparando string textarea validando
       if (descricao.value.length <= 10) {
         // alert("O número de caracteres precisa ser maior que 10!")
-        Swal.fire("O número de caracteres precisa ser maior que 10!",
-                  "Entrada Inválida!",
-                  "error");
+        Swal.fire({
+          title: 'Ops!',
+          text: 'O número de caracteres precisa ser maior que 10!',
+          icon: 'error',
+          confirmButtonText: 'Ok'
+        });
       } else {
         inputDataCriacao.value = (ano.toString() + "-" + mes.toString() + "-" + dia.toString());
         li.innerHTML = "Data de criação: " + inputDataCriacao.value + "<br>" + "Data Limite: " +
@@ -134,9 +140,12 @@ btn.addEventListener('click', function criarLista(evento) {
     }
     else {
       // alert("Escolha outra data!");
-      Swal.fire('Escolha outra data!',
-                'Não pode ser uma data anterior à data de hoje!',
-                'error');
+      Swal.fire({
+        title: 'Ops!',
+        text: 'Não pode ser uma data anterior à data de hoje!',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      });
     }
 
 
